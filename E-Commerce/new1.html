@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop - Premium E-commerce Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Enhanced Styles */
+        .navbar-logo {
+            width: 180px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .mega-menu {
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: rgba(255,255,255,0.98);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .deal-of-day {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 4rem 0;
+            margin: 3rem 0;
+            border-radius: 20px;
+        }
+
+        .brand-carousel img {
+            height: 60px;
+            margin: 0 2rem;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .brand-carousel img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .loyalty-program {
+            background: #f8f9fa;
+            padding: 4rem 0;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Professional Mega Menu Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light enhanced-navbar sticky-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="logo.svg" alt="E-Shop" class="navbar-logo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fas fa-bars me-2"></i>Shop Categories
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h6>Electronics</h6>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="dropdown-item">Smartphones</a></li>
+                                        <li><a href="#" class="dropdown-item">Laptops</a></li>
+                                        <li><a href="#" class="dropdown-item">Cameras</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6>Fashion</h6>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="dropdown-item">Men's Wear</a></li>
+                                        <li><a href="#" class="dropdown-item">Women's Wear</a></li>
+                                        <li><a href="#" class="dropdown-item">Accessories</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0">
+                                        <img src="featured-collection.jpg" class="card-img" alt="Featured">
+                                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                            <h5 class="text-white">Summer Collection</h5>
+                                            <a href="#" class="btn btn-light btn-sm">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Right Navigation -->
+                <div class="d-flex align-items-center">
+                    <div class="input-group search-container mx-3">
+                        <input type="text" class="form-control search-input" placeholder="Search products...">
+                        <button class="btn btn-outline-secondary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="dropdown mx-2">
+                        <a class="btn btn-link text-dark" href="#" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>My Account</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-heart me-2"></i>Wishlist</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#" class="btn btn-link text-dark position-relative mx-2">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                        <span class="cart-badge">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- New Daily Deals Section -->
+    <section class="deal-of-day animate-fade">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-start">
+                    <h2 class="display-5 fw-bold mb-3">Deal of the Day</h2>
+                    <p class="lead mb-4">Premium Smartwatch Series 7</p>
+                    <div class="countdown-timer mb-4">
+                        <span class="badge bg-dark me-2">23H</span>
+                        <span class="badge bg-dark me-2">45M</span>
+                        <span class="badge bg-dark">12S</span>
+                    </div>
+                    <button class="btn btn-light btn-lg">Shop Now - $299</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="smartwatch.png" alt="Smartwatch" class="img-fluid" style="max-height: 400px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Showcase Carousel -->
+    <section class="brand-carousel py-5 bg-white">
+        <div class="container">
+            <div class="d-flex justify-content-around align-items-center">
+                <img src="brand1.svg" alt="Brand 1" class="img-fluid">
+                <img src="brand2.svg" alt="Brand 2" class="img-fluid">
+                <img src="brand3.svg" alt="Brand 3" class="img-fluid">
+                <img src="brand4.svg" alt="Brand 4" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Comparison Section -->
+    <section class="comparison py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold">Compare Products</h2>
+            <div class="comparison-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Features</th>
+                            <th scope="col">Premium Model</th>
+                            <th scope="col">Standard Model</th>
+                            <th scope="col">Basic Model</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Battery Life</td>
+                            <td>48 Hours</td>
+                            <td>24 Hours</td>
+                            <td>12 Hours</td>
+                        </tr>
+                        <!-- Add more rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loyalty Program Section -->
+    <section class="loyalty-program">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">E-Shop Rewards</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0">
+                        <div class="card-body">
+                            <i class="fas fa-gem fa-3x text-primary mb-3"></i>
+                            <h5>Silver Tier</h5>
+                            <p>Earn 2% back on all purchases</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Gold and Platinum tiers -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Existing Sections (Products, Testimonials, Blog, Footer) -->
+
+    <script>
+        // Enhanced Interactions
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.querySelector('.product-img').style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.product-img').style.transform = 'scale(1)';
+            });
+        });
+
+        // Initialize Bootstrap components
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+    </script>
+</body>
+</html>
